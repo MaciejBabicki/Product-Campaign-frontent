@@ -12,6 +12,17 @@ Clone the repository or download the source code:
 ```
 git clone <https://github.com/MaciejBabicki/Product-Campaign-frontend.git>
 ```
+
+**Download External Libraries**
+
+This project uses external libraries such as axios, react-router-dom. Navigate to the project directory and run:
+```
+npm install react-router-dom
+```
+```
+npm install axios
+```
+
 **Run the Application**
 
 Run the application using the following command:
