@@ -12,3 +12,10 @@ Clone the repository or download the source code:
 ```
 git clone <https://github.com/MaciejBabicki/Product-Campaign-frontend.git>
 ```
+**Run the Application**
+
+Run the application using the following command:
+```
+npm run dev
+```
+
