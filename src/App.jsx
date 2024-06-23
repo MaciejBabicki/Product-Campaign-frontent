@@ -20,6 +20,7 @@ function App() {
           {/* //http://localhost:5000/add-campaign */}
           <Route path='add-campaign' element = {<CampaignComponent/>}></Route>
 
+          {/* //http://localhost:5000/edit-campaign */}
           <Route path='/edit-campaign/:id' element = {<CampaignComponent/>}></Route>
         </Routes>
       </BrowserRouter>

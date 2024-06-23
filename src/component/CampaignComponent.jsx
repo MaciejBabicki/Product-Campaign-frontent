@@ -7,7 +7,7 @@ const CampaignComponent = () => {
     const [keyword, setKeyword] = useState('');
     const [price, setPrice] = useState('');
     const [fund, setFund] = useState('');
-    const [status, setStatus] = useState('');
+    const [status, setStatus] = useState(false);
     const [city, setCity] = useState('');
     const [radius, setRadius] = useState('');
     const { id } = useParams();
@@ -43,7 +43,7 @@ const CampaignComponent = () => {
 
     function saveCampaign(e) {
         e.preventDefault();
-        const campaign= { name, keyword, price, fund, status, city, radius};
+        const campaign = { name, keyword, price: parseInt(price), fund: parseInt(fund), status, city, radius: parseInt(radius) };
         console.log(campaign);
         if (id) {
 
@@ -53,32 +53,31 @@ const CampaignComponent = () => {
                 navigate('/campaign');
                 setName('');
                 setKeyword('');
-                setPrice('');
-                setFund('');
-                setStatus('');
+                setPrice();
+                setFund();
+                setStatus(false);
                 setCity('');
-                setRadius('');
+                setRadius();
             })
-            .catch(error => {
-                console.error(error);
-            });
-        }else{
+                .catch(error => {
+                    console.error(error);
+                });
+        } else {
             // Create new campaign
             createCampaign(id, campaign).then((response) => {
                 console.log(response.data);
                 navigate('/campaign');
                 setName('');
                 setKeyword('');
-                setPrice('');
-                setFund('');
-                setStatus('');
+                setPrice();
+                setFund();
+                setStatus(false);
                 setCity('');
-                setRadius('');
+                setRadius();
             })
-            .catch(error => {
-                console.error(error);
-            });
-
+                .catch(error => {
+                    console.error('Error creating campaign', error);
+                });
         }
     }
     useEffect(() => {
@@ -105,10 +104,10 @@ const CampaignComponent = () => {
         }
     };
 
-  return (
-    <div className='container'>
-        <div className='row'>
-        <div className='card col-md-6 offset-md-3 offset-md-3'>
+    return (
+        <div className='container'>
+            <div className='row'>
+                <div className='card col-md-6 offset-md-3 offset-md-3'>
                     {title()}
                     <div className='card-body'>
                         <form>
@@ -116,7 +115,6 @@ const CampaignComponent = () => {
                                 <label className='form-label'>Name: </label>
                                 <input
                                     type='text'
-                                    placeholder='Enter Campaign Name'
                                     name='name'
                                     value={name}
                                     className='form-control'
@@ -138,7 +136,6 @@ const CampaignComponent = () => {
                                 <label className='form-label'>Campaign Price: </label>
                                 <input
                                     type='number'
-                                    placeholder='Enter Campaign Price'
                                     name='price'
                                     value={price}
                                     className='form-control'
@@ -149,7 +146,6 @@ const CampaignComponent = () => {
                                 <label className='form-label'>Campaign Fund: </label>
                                 <input
                                     type='number'
-                                    placeholder='Enter Campaign Fund'
                                     name='fund'
                                     value={fund}
                                     className='form-control'
@@ -160,7 +156,6 @@ const CampaignComponent = () => {
                                 <label className='form-label'>Campaign Status: </label>
                                 <input
                                     type='boolean'
-                                    placeholder='Enter Campaign Status'
                                     name='status'
                                     value={status}
                                     className='form-control'
@@ -171,7 +166,6 @@ const CampaignComponent = () => {
                                 <label className='form-label'>Campaign City: </label>
                                 <input
                                     type='text'
-                                    placeholder='Enter Campaign City'
                                     name='city'
                                     value={city}
                                     className='form-control'
@@ -182,7 +176,6 @@ const CampaignComponent = () => {
                                 <label className='form-label'>Campaign Radius: </label>
                                 <input
                                     type='number'
-                                    placeholder='Enter Campaign Number'
                                     name='radius'
                                     value={radius}
                                     className='form-control'
@@ -193,11 +186,9 @@ const CampaignComponent = () => {
                         </form>
                     </div>
                 </div>
+            </div>
         </div>
-    </div>
-    
-
-  )
+    )
 }
 
 export default CampaignComponent

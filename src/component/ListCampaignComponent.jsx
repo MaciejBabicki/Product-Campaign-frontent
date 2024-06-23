@@ -69,13 +69,8 @@ const ListCampaignComponents = () => {
                     )
                 }
             </tbody>
-
         </table>
-        
     </div>
-
-        
-    
   )
 }
 
