@@ -30,7 +30,7 @@ Run the application using the following command:
 npm run dev
 ```
 
-![image](https://github.com/MaciejBabicki/Product-Campaign-frontent/assets/123827748/1a3fee0b-1130-42df-b043-967c5ae0d4f1)
+![image](https://github.com/MaciejBabicki/Product-Campaign-frontent/assets/123827748/d75fc621-d942-40fd-9efd-19f5c671584c)
 
 ![image](https://github.com/MaciejBabicki/Product-Campaign-frontent/assets/123827748/192b1944-3577-435d-a14a-421708cea120)
 
