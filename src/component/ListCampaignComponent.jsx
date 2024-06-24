@@ -44,7 +44,7 @@ const ListCampaignComponents = () => {
                     <th>Fund</th>
                     <th>Status</th>
                     <th>City</th>
-                    <th>Radius</th>
+                    <th>Radius [km]</th>
 
                 </tr>
             </thead>

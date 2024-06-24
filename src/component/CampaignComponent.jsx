@@ -50,7 +50,7 @@ const CampaignComponent = () => {
             // Update existing campaign
             updateCampaign(id, campaign).then((response) => {
                 console.log(response.data);
-                navigate('/campaign');
+                navigate('/campaigns');
                 setName('');
                 setKeyword('');
                 setPrice();
@@ -66,7 +66,7 @@ const CampaignComponent = () => {
             // Create new campaign
             createCampaign(id, campaign).then((response) => {
                 console.log(response.data);
-                navigate('/campaign');
+                navigate('/campaigns');
                 setName('');
                 setKeyword('');
                 setPrice();
@@ -173,7 +173,7 @@ const CampaignComponent = () => {
                                 />
                             </div>
                             <div className='form-group mb-5'>
-                                <label className='form-label'>Campaign Radius: </label>
+                                <label className='form-label'>Campaign Radius [km]: </label>
                                 <input
                                     type='number'
                                     name='radius'
