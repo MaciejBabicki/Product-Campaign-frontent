@@ -30,3 +30,6 @@ Run the application using the following command:
 npm run dev
 ```
 
+![image](https://github.com/MaciejBabicki/Product-Campaign-frontent/assets/123827748/1a3fee0b-1130-42df-b043-967c5ae0d4f1)
+
+
